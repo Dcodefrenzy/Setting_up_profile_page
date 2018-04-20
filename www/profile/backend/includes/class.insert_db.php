@@ -3,7 +3,7 @@
 	class Skills{
 		private $table;
 		private $error;
-		public $result = "";
+		public $result;
 
 		public function insertContent($dbcon, $table, $expertise, $rating ){
 				$this->table=$table;
@@ -28,6 +28,32 @@
 			$stat->bindParam(':a', $about_me);
 			$stat->execute();
 		}
+		public function insertEducationContent($dbcon, $table, $school_atended, $degree_recived, $start, $end){
+				$this->table=$table;
+			$stat=$dbcon->prepare("INSERT INTO $this->table(school, degree, start_year, end_year) 
+				VALUES(:sc, :de, :st, :en)");
+			$data=[
+				':sc' => $school_atended,
+				':de' => $degree_recived,
+				':st' => $start,
+				':en' => $end,			
+			];
+			$stat->execute($data);
+
+		}
+		public function insertEducation($dbcon, $table, $school_atended, $degree_recived, $start, $end){
+				$this->table=$table;
+			$stat=$dbcon->prepare("INSERT INTO $this->table(school, degree, start_year, end_year) 
+				VALUES(:sc, :de, :st, :en)");
+			$data=[
+				':sc' => $school_atended,
+				':de' => $degree_recived,
+				':st' => $start,
+				':en' => $end,			
+			];
+			$stat->execute($data);
+
+		}		
 
 	}
 
