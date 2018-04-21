@@ -41,13 +41,13 @@
 			$stat->execute($data);
 
 		}
-		public function insertEducation($dbcon, $table, $school_atended, $degree_recived, $start, $end){
+		public function insertExperience($dbcon, $table, $position_gotten, $organiz, $start, $end){
 				$this->table=$table;
-			$stat=$dbcon->prepare("INSERT INTO $this->table(school, degree, start_year, end_year) 
+			$stat=$dbcon->prepare("INSERT INTO $this->table(postion, organization, start_year, end_year) 
 				VALUES(:sc, :de, :st, :en)");
 			$data=[
-				':sc' => $school_atended,
-				':de' => $degree_recived,
+				':sc' => $position_gotten,
+				':de' => $organiz,
 				':st' => $start,
 				':en' => $end,			
 			];

@@ -17,12 +17,13 @@ a { text-decoration: none; }
 section {
 	height: 120px;
 	background-color: #16193b;
-}
+
 
 .mast {
 	position: relative;
 	width: 960px;
 	margin: 0 auto 0 auto;
+
 }
 
 .mast h1 {

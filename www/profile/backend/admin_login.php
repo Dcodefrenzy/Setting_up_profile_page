@@ -28,6 +28,9 @@
           	$response = $logIn->result;
           	if($response[0]){
          $user = $response[1];
+         $_SESSION['firstname'] = $user['firstname'];
+         $_SESSION['lastname'] = $user['lastname'];
+         $_SESSION['username'] = $user['username'];
          header("Location:dashboard.php");
 
           }	
