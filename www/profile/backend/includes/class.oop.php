@@ -13,7 +13,7 @@
 			":".implode(', :', array_keys($info))
 
 			);
-			var_dump($query);
+			
 			try{
 			$statment = $stat->prepare($query);
 
