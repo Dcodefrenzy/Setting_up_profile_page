@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 }
-
 body {
 	font-family: "Verdana";
 }
@@ -31,10 +30,6 @@ section {
 	font-size: 40px;
 	letter-spacing: -3px;
 	color: #fff;
-}
-
-.mast h1 span {
-	color: #add5f7;
 }
 
 .mast nav ul {

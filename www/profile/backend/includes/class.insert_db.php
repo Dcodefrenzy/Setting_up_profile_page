@@ -53,7 +53,14 @@
 			];
 			$stat->execute($data);
 
-		}		
+		}
+		public function insertServiceContent($dbcon, $table, $about_me, $my_service){
+				$this->table=$table;
+			$stat=$dbcon->prepare("INSERT INTO $this->table(service_details, service, date_created) VALUES(:a, :s, NOW())");
+			$stat->bindParam(':a', $about_me);
+			$stat->bindParam(':s', $my_service);
+			$stat->execute();
+		}				
 
 	}
 
