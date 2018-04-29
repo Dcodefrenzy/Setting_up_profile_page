@@ -17,9 +17,9 @@
 				<thead>
 					<tr>
 						
-						<th>Service</th>
-						<th>Service details</th>
-						<th>Date created</th>
+						<th>Name</th>
+						<th>Link</th>
+						<th>Image</th>
 						<th>edit</th>
 						<th>delete</th>
 					</tr>

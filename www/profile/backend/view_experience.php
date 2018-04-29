@@ -8,7 +8,7 @@
 	
 
 	$view_education -> selectFromDb($conn, 'work_experienc');
-	 $display = $view_education->skills();
+	 $display = $view_education->education();
 
 
 	?>
@@ -17,9 +17,10 @@
 				<thead>
 					<tr>
 						
-						<th>Skill</th>
-						<th>Skill Rate</th>
-						<th>Date created</th>
+						<th>Position</th>
+						<th>Organization</th>
+						<th>Start Year</th>
+						<th>End year</th>
 						<th>edit</th>
 						<th>delete</th>
 					</tr>
